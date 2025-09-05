@@ -1,0 +1,78 @@
+/* BasicCSS stylesheet */
+
+/* General body text */
+body {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+/* Headings */
+h1 {
+  color: red;
+}
+
+h2 {
+  background-color: red;
+  color: blue;
+}
+
+h3 {
+    background-color: orange;
+    margin: 0; /* remove default top/bottom margins */
+    padding: 10px; /* optional: add padding for spacing */
+}
+
+h3 + p {
+    margin-top: 0; /* remove the gap above the paragraph */
+    background-color: orange; /* optional if you want the paragraph to continue the orange */
+    padding: 10px; /* optional: spacing inside paragraph */
+}
+
+/* Paragraph styles */
+.second-paragraph {
+  background-color: red;
+  color: blue;
+}
+
+.highlight-yellow {
+  background-color: yellow;
+  color: green;
+}
+
+/* Orange box section */
+.orange-section {
+  background-color: orange;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Span styling for inline colored text */
+.spanstyle {
+  color: blue;
+}
+
+/* Link styles */
+a:link {
+  color: darkblue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darkblue;
+}
+
+a:hover {
+  color: lightblue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: lightblue;
+}
+.orange-block {
+    background-color: orange;
+    padding: 10px;
+}
+footer {
+    background-color: green
+}
