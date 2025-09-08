@@ -1,21 +1,24 @@
-/* style.css */
+/* ============================= */
+/* style.css - Final Version     */
+/* Links always red by default  */
+/* ============================= */
 
 /* Reset default browser styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     background-color: #ffffff; /* white background */
     color: #000000; /* black text */
+    line-height: 1.6;
 }
 
 /* Header styling */
 header {
     background-color: #cc0000; /* red header */
     color: #ffffff; /* white text */
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 }
 
 /* Logo styling */
@@ -25,42 +28,31 @@ header {
     margin: 10px auto;
 }
 
-/* Navigation menu */
+/* Navigation styling */
 nav ul {
-    list-style-type: none;
-    background-color: #000000; /* black nav bar */
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
+    background-color: #000000; /* black nav bar */
 }
 
 nav ul li {
     margin: 0 10px;
 }
 
-/* Links - LVHA order: red default, yellow hover, green visited */
-nav ul li a:link {
-    color: red; /* default red links */
+/* Links styling - always red by default */
+nav ul li a {
+    color: red; /* always red */
     text-decoration: none;
     padding: 10px 20px;
     font-weight: bold;
-    background-color: transparent;
-}
-
-nav ul li a:visited {
-    color: green; /* visited links */
-    background-color: transparent;
+    display: block;
 }
 
 nav ul li a:hover {
-    color: yellow; /* hover links */
-    background-color: transparent;
-}
-
-nav ul li a:active {
-    color: orange; /* optional active click */
-    background-color: transparent;
+    color: yellow; /* hover yellow */
 }
 
 /* Main content styling */
@@ -88,19 +80,19 @@ p {
     color: #000000; /* black text */
 }
 
-/* Div styling for highlight */
+/* Div styling for highlights */
 #highlight-div {
-    background-color: #f2f2f2; /* light gray for visibility */
+    background-color: #f2f2f2; /* light gray for contrast */
     padding: 15px;
     margin: 10px 0;
-    border-left: 5px solid #cc0000; /* red border */
+    border-left: 5px solid #cc0000; /* red accent */
 }
 
-/* Span styling for inline highlight */
+/* Span styling for inline highlights */
 .span-highlight {
     color: #cc0000; /* red text */
     font-weight: bold;
-    background-color: #ffffff; /* white background for contrast */
+    background-color: #ffffff; /* white background */
     padding: 2px 4px;
     border-radius: 3px;
 }
@@ -112,4 +104,8 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+/* Current page link */
+nav ul li a.current {
+    color: green; /* highlight the page you are on */
 }
