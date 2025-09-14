@@ -1,0 +1,151 @@
+/* ===========================
+   CSS Continued Assignment
+   =========================== */
+
+/* ---------- Color Variables ---------- */
+:root {
+  --bg: #eef2f5;
+  --blue-box: rgba(0, 102, 204, 0.95);   /* deep blue with slight transparency */
+  --green-box: rgba(34, 139, 34, 0.95);  /* forest green */
+  --orange-box: rgba(255, 102, 0, 0.95); /* sidebar orange */
+  --panel: rgba(255, 255, 255, 0.85);
+  --text-light: #ffffff;
+}
+
+/* ---------- Full-Page Background ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;  /* MISSING SEMICOLON FIXED */
+  color: #111;
+  background: url('assignment-img2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ---------- Main Content ---------- */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Large Blue Box ---------- */
+.blue-box {
+  background-color: var(--blue-box);
+  color: var(--text-light);
+  padding: 20px;
+  margin-bottom: 10px;   /* removed duplicate values, only one is needed */
+  border-radius: 8px;
+  border: 2px solid #0000ff;  /* fixed "solide" typo and added missing semicolon */
+}
+
+.blue-box h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+
+.blue-box p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- Smaller Green Box ---------- */
+.green-box {
+  background-color: var(--green-box);
+  color: var(--text-light);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.green-box h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #e6ffe6;
+}
+
+.green-box p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ---------- Vertical Slim Sidebar Box ---------- */
+.vertical-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background-color: var(--orange-box);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  z-index: 2;
+}
+
+.vertical-box p {
+  margin: 0;
+  padding: 4px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+/* ---------- Box Model Demonstration ---------- */
+.boxmodel-demo {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 140px; /* leaves space so it doesn't overlap the vertical sidebar */
+}
+
+/* Mushroom image with margin, padding, border */
+.img-wrapper {
+  display: inline-block;
+  background-color: #e8f4ff;
+  padding: 20px;
+  border: 6px solid #0055ff;
+  margin: 30px;
+}
+
+.img-wrapper img {
+  display: block;
+  max-width: 320px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Margin edge visual hint */
+.img-wrapper.margin-edge-hint {
+  outline: 3px dashed rgba(255, 102, 0, 0.6);
+  outline-offset: 10px;
+}
+
+/* ---------- Utility Classes ---------- */
+.customtext {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.note {
+  font-size: 13px;
+  color: #555;
+}
