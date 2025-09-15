@@ -1,0 +1,121 @@
+/* ============================= */
+/* style4.css - Final Version    */
+/* ============================= */
+
+/* Reset default browser styles */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* requirement: Helvetica or Arial */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* white fallback background */
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall.png'); /* requirement: background image */
+    background-repeat: repeat; /* tile pattern */
+    color: #000000; /* black text */
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #cc0000; /* red header */
+    color: #ffffff; /* white text */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo styling */
+#logo {
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+    border: 8px solid black; /* heavy black border */
+    padding: 10px; /* yellow space between border and image */
+    background-color: yellow; /* yellow space requirement */
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #000000; /* black nav bar */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Links styling - always red by default */
+nav ul li a {
+    color: red; /* always red */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: yellow; /* hover yellow */
+}
+
+/* Current page link */
+nav ul li a.current {
+    color: green; /* highlight the page you are on */
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+/* Headings styling - requirement: orange, italic, normal weight */
+h1, h2, h3, h4, h5, h6 {
+    color: orange;
+    font-style: italic;
+    font-weight: normal; /* not bold */
+    background-color: transparent;
+    padding: 10px 0;
+}
+
+/* Paragraph styling */
+p {
+    color: #000000;
+}
+
+/* Center and justify special paragraphs */
+.center-text {
+    text-align: center; /* requirement: center text */
+}
+
+.justify-text {
+    text-align: justify; /* requirement: justify text */
+    width: 80%; /* limit width so justification is clear */
+    margin: 0 auto;
+}
+
+/* Div styling for highlights */
+#highlight-div {
+    background-color: #f2f2f2; /* light gray for contrast */
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #cc0000; /* red accent */
+}
+
+/* Span styling for inline highlights */
+.span-highlight {
+    color: #cc0000;
+    font-weight: bold;
+    background-color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
