@@ -1,0 +1,59 @@
+/* ===========================
+   Global Reset
+=========================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* ===========================
+   Title Section
+=========================== */
+h1 {
+  margin: 20px 10px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+hr {
+  border: 2px solid black;
+  margin: 10px 0 20px 0;
+}
+
+/* ===========================
+   Navigation Bar
+=========================== */
+.navbar {
+  display: flex;
+  gap: 5px; /* space between buttons */
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  background: linear-gradient(to bottom, #3a6ff7, #002f9e); /* blue gradient */
+  color: white;
+  text-decoration: none;
+  padding: 20px 40px;
+  border: 1px solid black;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar a:hover {
+  background: #001f66;
+}
+
+/* ===========================
+   Image Section
+=========================== */
+.content img {
+  margin-left: 10px;
+  max-width: 480px; /* keeps image under control */
+  border: 1px solid #ccc;
+}
