@@ -1,0 +1,122 @@
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #999999; /* Grey page background */
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+
+/* ---------- Wrapper ---------- */
+#wrapper {
+  width: 1200px;
+  margin: 1em auto;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 260px 1fr;   /* Sidebar on left, content on right */
+  grid-template-rows: 140px 1fr 90px; /* Header, main area, footer */
+  border: 1px solid #008000; /* Thin green border around entire layout */
+}
+
+/* ---------- Header ---------- */
+header {
+  grid-column: 1 / -1;
+  background-color: #d51212;
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #008000;
+}
+header h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* ---------- Navigation Sidebar ---------- */
+nav {
+  padding: 28px 20px;
+  background: linear-gradient(to bottom, #fff976 0%, #ffeb3b 60%);
+  border-right: 1px solid #0000ff; /* Thin blue border around sidebar */
+}
+nav ul {
+  margin: 0;
+  padding-left: 16px;
+}
+nav li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+nav a {
+  color: #0a3ea6;
+  text-decoration: underline;
+}
+
+/* ---------- Main Content Area ---------- */
+main {
+  padding: 18px 40px 30px 40px;
+  background: linear-gradient(#ffffff 0%, #f3f3f3 100%);
+  overflow: auto;
+  border-left: 1px solid #008000; /* Green border between nav and content */
+}
+
+main h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* ---------- Content Layout ---------- */
+.content-area {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Image left, text right */
+  grid-template-rows: auto auto;    /* Top text + bottom paragraph */
+  grid-gap: 20px;
+}
+
+/* Mushroom image */
+.main-image {
+  grid-row: 1 / span 2; /* Stays on the left for both top and bottom rows */
+  width: 280px;
+  height: auto;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+/* Top text to the right of the image */
+.text-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Bottom full-width text */
+.bottom-text {
+  grid-column: 1 / -1; /* Spans across both columns */
+}
+.bottom-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  grid-column: 1 / -1;
+  background-color: #c60f0f;
+  padding-left: 18px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #008000;
+}
+footer p {
+  margin: 0;
+  font-size: 16px;
+}

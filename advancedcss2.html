@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced CSS, Part 2</title>
+  <link rel="stylesheet" href="advanced2.css">
+</head>
+<body>
+  <div id="wrapper">
+    <!-- HEADER -->
+    <header>
+      <h1>Advanced CSS, Part 2</h1>
+    </header>
+
+    <!-- LEFT SIDEBAR -->
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <h2>Welcome!</h2>
+
+      <!-- Container for image and text -->
+      <div class="content-area">
+        <!-- Mushroom Image -->
+        <img src="mushroom.jpg" alt="Mushroom" class="main-image">
+
+        <!-- Two flowing paragraphs to the right of the image -->
+        <div class="text-right">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Vitae consequatur, aliquam tempora sit voluptatem! 
+            The text will naturally wrap across the full width of this white area, 
+            flowing like a regular text box.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Consequatur magni dicta, ex aperiam velit. 
+            The paragraph continues and automatically moves to the next line when it reaches the edge.
+          </p>
+        </div>
+
+        <!-- Paragraph stretching full width below the image -->
+        <div class="bottom-text">
+          <p>
+            This is the full-width paragraph below the mushroom image and the top two paragraphs. 
+            It will span across the entire main content area, naturally wrapping from edge to edge 
+            just like a regular document. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Nostrum repellendus nulla voluptatibus fuga facere nihil quisquam veniam perspiciatis, 
+            error quibusdam temporibus pariatur corrupti laudantium minima ipsam cupiditate 
+            reiciendis sequi laboriosam?
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Copyright Illinois State University</p>
+    </footer>
+  </div>
+</body>
+</html>
