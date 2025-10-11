@@ -114,6 +114,19 @@ h2{
   border:1px solid #333;
   outline:6px solid #fff;
 }
+/* ----- Red link color + darker hover ----- */
+.content a,
+.side-blue a {
+  color: #c00000;             /* normal red */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.content a:hover,
+.side-blue a:hover {
+  color: #800000;             /* darker red on hover (rich maroon tone) */
+  text-decoration: underline;
+}
 
 /* Clear floats at the end of content blocks if needed */
 .clearfix::after { content:""; display:block; clear:both; }
