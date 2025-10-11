@@ -20,12 +20,15 @@ body {
   background: #f7f7f7;
   border: 6px solid #2f6aa6;            /* thick blue outer frame */
 }
-/* ----- Red link color + darker hover ----- */
+/* ----- Red link color + green hover ----- */
 .content a,
 .side-blue a {
   color: #c00000;             /* normal red */
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+}
+}
+
 }
 
 .content a:hover,
@@ -167,4 +170,5 @@ footer img { height:84px; width:auto; }
   .side-blue, .content { width:100%; }
   .float-left, .float-right { float:none; width:100%; max-width:none; margin:10px 0; }
 }
+
 
