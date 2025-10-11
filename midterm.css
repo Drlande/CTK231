@@ -1,0 +1,143 @@
+/* ============================
+   CTK 301 – Midterm Microsite
+   Full-height side panel + bordered footer
+   ============================ */
+
+/* Reset / base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: #8c8c8c;                 /* page gray like reference */
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+  line-height: 1.35;
+}
+
+/* Framed site */
+.site {
+  width: 760px;
+  margin: 20px auto;
+  background: #f7f7f7;
+  border: 6px solid #2f6aa6;            /* thick blue outer frame */
+}
+
+/* Header: gradient + h1 link */
+header {
+  background: linear-gradient(#2f86d2, #0e55a2);
+  padding: 18px 20px 24px;
+}
+h1 {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: .3px;
+}
+h1 a { color: #9fd8ff; text-decoration: none; transition: color .15s; }
+h1 a:hover { color: #fff; }
+
+/* Nav: equal tabs + gradients + hover */
+nav {
+  background: linear-gradient(#2f6aa6, #0d4c8c);
+  border-top: 1px solid rgba(255,255,255,.25);
+  border-bottom: 1px solid rgba(0,0,0,.35);
+}
+nav ul { margin:0; padding:0; list-style:none; display:flex; }
+nav li { flex: 1 1 33.333%; }
+nav a {
+  display:block; text-align:center; text-decoration:none;
+  padding:14px 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700; color:#e9f2ff;
+  border-right:1px solid rgba(0,0,0,.25);
+  transition: all .12s;
+}
+nav li:last-child a { border-right:none; }
+nav a:hover { background: linear-gradient(#4aa0f0, #1b70d1); color:#fff; }
+nav a.active { background: linear-gradient(#56a8f2, #2677d7); color:#fff; }
+
+/* Main content container – FLEX so the blue side column stretches full height */
+main { background:#fff; padding:0; }
+.main-split {
+  display:flex;                         /* makes side column the full height */
+  align-items: stretch;
+}
+
+/* Left/right side columns (full-height blue background panels) */
+.side-blue {
+  width: 260px;
+  background: #bcd3e6;                  /* light blue fill from reference */
+  padding: 12px 12px 16px;
+  /* IMPORTANT: no border/outline so it doesn't look "boxy" */
+  border: none;
+}
+.content {
+  flex: 1;
+  padding: 18px;                         /* white content area */
+}
+
+/* About page variant (blue panel on the right) */
+.side-blue.right { order: 2; }
+.content.left { order: 1; }
+
+/* Headings */
+h2{
+  margin: 6px 0 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 22px; font-weight: 700; color:#123a77;
+  border-bottom: 3px solid #1f63b5; padding-bottom: 4px;
+}
+
+/* Red links in body */
+.content a, .side-blue a { color:#c00000; text-decoration:none; }
+.content a:hover, .side-blue a:hover { text-decoration:underline; }
+
+/* Text in the blue side must be bold + justified (rubric) */
+.side-blue p { margin: 8px 0 0; text-align: justify; font-weight: 700; }
+
+/* Floated images so paragraphs wrap around them */
+.float-left {
+  float: left;
+  max-width: 360px;
+  width: 58%;
+  margin: 6px 16px 10px 0;
+  background:#fff;
+  border:1px solid #333;
+  outline:6px solid #fff;               /* white mat like reference */
+}
+.float-right {
+  float: right;
+  max-width: 360px;
+  width: 58%;
+  margin: 6px 0 10px 16px;
+  background:#fff;
+  border:1px solid #333;
+  outline:6px solid #fff;
+}
+
+/* Clear floats at the end of content blocks if needed */
+.clearfix::after { content:""; display:block; clear:both; }
+
+/* Gallery */
+.gallery {
+  display:grid; grid-template-columns: repeat(3, 1fr); gap:18px;
+}
+.card h2 { margin-top:0; }
+.card img { width:100%; height:auto; background:#fff; border:1px solid #333; outline:6px solid #fff; }
+.card p { margin-top:8px; }
+
+/* Footer: thicker red bar WITH thick blue border around the footer itself */
+footer {
+  background:#c7332e;
+  padding: 10px 18px;
+  border: 6px solid #2f6aa6;            /* blue thick border around footer */
+}
+footer a.logo { display:inline-block; }
+footer img { height:84px; width:auto; }
+
+/* Small screens (optional) */
+@media (max-width: 820px){
+  .main-split { flex-direction: column; }
+  .side-blue, .content { width:100%; }
+  .float-left, .float-right { float:none; width:100%; max-width:none; margin:10px 0; }
+}
