@@ -3,81 +3,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DAX — Selected Works</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <title>DAX LANDESS — Selected Works</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icon font for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Page styles -->
   <link href="mockup.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <a class="skip" href="#works">Skip to content</a>
 
   <div id="wrapper">
-    <!-- Decorative red banner (replaces MARATHON spine) -->
+    <!-- Decorative red banner (left anchor) -->
     <aside class="banner" aria-hidden="true">
-      <div class="banner__inner">
+      <div class="banner__inner" role="img" aria-label="Decorative red banner">
         <div class="ribbon"></div>
-        <div class="hash"></div>
+        <div class="hash">Need image at some point </div>
       </div>
     </aside>
 
-    <!-- WELCOMING HUB -->
-    <header class="hub" role="banner" aria-label="Intro">
+    <!-- Welcoming hub -->
+    <header class="hub" role="banner" aria-label="Introduction">
       <div class="hub__brand">
         <div class="dot" aria-hidden="true"></div>
-        <h1 class="hub__name">DAX LANDESS</h1>
+        <div>
+          <h1 class="hub__name">DAX LANDESS</h1>
+          <p class="hub__tag">Design · Illustration · 3D</p>
+        </div>
       </div>
-      <p class="hub__tag">Design · Illustration · 3D</p>
+
       <p class="hub__lede">
+        I craft visual stories with rhythm, texture, and restraint. Below are selected works — click any tile to explore details.
       </p>
+
       <div class="hub__actions">
         <a href="#works" class="btn btn--primary">See Work</a>
         <a href="#" class="btn btn--ghost">Download CV</a>
+
+        <!-- Social icons (uses Font Awesome) -->
+        <nav class="social" aria-label="Social links">
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="ArtStation" aria-label="ArtStation"><i class="fa-solid fa-palette"></i></a>
+          <a href="#" title="Behance" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </nav>
+      </div>
+
+      <!-- Inline audio control (replace ambient.mp3 with your file) -->
+      <div class="media-controls" aria-hidden="false">
+        <label for="ambient" class="media-label">Ambient</label>
+        <audio id="ambient" controls preload="none">
+          <source src="ambient.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </header>
 
-    <!-- GALLERY -->
+    <!-- Gallery -->
     <main class="grid-gallery" id="works" aria-label="Selected Works">
       <h2 class="visually-hidden">Selected Works</h2>
 
-      <article class="item">
+      <!-- example tile — you can add links to detail pages later -->
+      <article class="item" tabindex="0" aria-labelledby="work1-title">
         <img src="project 1.jpg" alt="Neon tactical character in moody workshop" />
         <div class="item__meta">
-          <h3>Interface Studies</h3>
+          <h3 id="work1-title">Interface Studies</h3>
           <p>UI shapes & typographic hardware</p>
         </div>
       </article>
 
-      <article class="item">
+      <article class="item" tabindex="0" aria-labelledby="work2-title">
         <img src="project 2.jpg" alt="Paper palace architectural render" />
         <div class="item__meta">
-          <h3>Paper Palace</h3>
+          <h3 id="work2-title">Paper Palace</h3>
           <p>Scale model, light direction, texture</p>
         </div>
       </article>
 
-      <article class="item">
+      <article class="item" tabindex="0" aria-labelledby="work3-title">
         <img src="painting 2.png" alt="Space window painting with blue planet horizon" />
         <div class="item__meta">
-          <h3>Observation Deck</h3>
+          <h3 id="work3-title">Observation Deck</h3>
           <p>Digital painting · atmosphere study</p>
         </div>
       </article>
 
-      <article class="item">
+      <article class="item" tabindex="0" aria-labelledby="work4-title">
         <img src="project 3.jpg" alt="Operator squad pose on an icy map" />
         <div class="item__meta">
-          <h3>Squad Readiness</h3>
+          <h3 id="work4-title">Squad Readiness</h3>
           <p>Story beats + color keys</p>
         </div>
       </article>
 
-      <article class="item">
+      <article class="item" tabindex="0" aria-labelledby="work5-title">
         <img src="Illustration.jpg" alt="Stylized portrait with soft studio lighting" />
         <div class="item__meta">
-          <h3>Studio Portrait</h3>
+          <h3 id="work5-title">Studio Portrait</h3>
           <p>Shape language & edge control</p>
         </div>
       </article>
+
+      <!-- Video demo tile (replace reel.mp4 with your video) -->
+      <article class="item video-item" tabindex="0" aria-labelledby="work6-title">
+        <video controls preload="none" poster="project 2.jpg" aria-describedby="work6-desc">
+          <source src="reel.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <div class="item__meta">
+          <h3 id="work6-title">Demo Reel</h3>
+          <p id="work6-desc">Short reel showing motion work and edits.</p>
+        </div>
+      </article>
+
     </main>
+
+    <!-- Floating social column (right side) -->
+    <aside class="social-side" aria-hidden="true">
+      <a href="#" title="Instagram" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" title="X / Twitter" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" title="ArtStation" aria-hidden="true"><i class="fa-solid fa-palette"></i></a>
+    </aside>
   </div>
+
+  <!-- small accessibility script to allow Enter to activate article tiles (optional and tiny) -->
+  <script>
+    document.querySelectorAll('.item[tabindex]').forEach(it=>{
+      it.addEventListener('keydown', e=>{
+        if(e.key === 'Enter') {
+          // for now, focus the first interactive element inside (video or link)
+          const media = it.querySelector('video, a, audio');
+          if(media) media.focus();
+        }
+      });
+    });
+  </script>
 </body>
 </html>
