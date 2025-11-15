@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fancy Example</title>
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="fancy.css">
+
+  <!-- Fancybox (lightbox galleries) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+
+  <!-- Carousel core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/carousel/carousel.umd.js"></script>
+
+  <!-- Carousel arrows -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.arrows.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/carousel/carousel.arrows.umd.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1>Fancy Example</h1>
+
+    <!-- ======= GALLERY 1 (thumbnails at top) ======= -->
+    <div class="gallery-thumbs">
+      <a href="icecream.jpg" data-fancybox="gallery1" data-caption="Ice Cream">
+        <img src="icecream_thumb.jpg" alt="Ice Cream thumbnail">
+      </a>
+
+      <a href="patch.jpg" data-fancybox="gallery1" data-caption="Patch">
+        <img src="patch_thumb.jpg" alt="Patch thumbnail">
+      </a>
+
+      <a href="water.jpg" data-fancybox="gallery1" data-caption="Water">
+        <img src="water_thumb.jpg" alt="Water thumbnail">
+      </a>
+    </div>
+
+    <!-- ======= CAROUSEL 1 (under first gallery) ======= -->
+    <div class="f-carousel" id="myCarousel">
+      <div class="f-carousel__slide">
+        <img src="icecream.jpg" alt="Ice Cream">
+      </div>
+      <div class="f-carousel__slide">
+        <img src="patch.jpg" alt="Patch">
+      </div>
+      <div class="f-carousel__slide">
+        <img src="water.jpg" alt="Water">
+      </div>
+    </div>
+
+    <!-- ======= GALLERY 2 (second set of thumbnails) ======= -->
+    <!-- Uses a DIFFERENT data-fancybox value so it’s its own 3-image gallery -->
+    <div class="gallery-thumbs second-gallery">
+      <a href="icecream.jpg" data-fancybox="gallery2" data-caption="Ice Cream (Second Gallery)">
+        <img src="icecream_thumb.jpg" alt="Ice Cream thumbnail">
+      </a>
+
+      <a href="patch.jpg" data-fancybox="gallery2" data-caption="Patch (Second Gallery)">
+        <img src="patch_thumb.jpg" alt="Patch thumbnail">
+      </a>
+
+      <a href="water.jpg" data-fancybox="gallery2" data-caption="Water (Second Gallery)">
+        <img src="water_thumb.jpg" alt="Water thumbnail">
+      </a>
+    </div>
+
+    <!-- ======= CAROUSEL 2 (under second gallery) ======= -->
+    <div class="f-carousel" id="secondCarousel">
+      <div class="f-carousel__slide">
+        <img src="icecream.jpg" alt="Ice Cream - Second Carousel">
+      </div>
+      <div class="f-carousel__slide">
+        <img src="patch.jpg" alt="Patch - Second Carousel">
+      </div>
+      <div class="f-carousel__slide">
+        <img src="water.jpg" alt="Water - Second Carousel">
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= JS: Fancybox + both Carousels ======= -->
+  <script>
+    // Lightbox for any element with data-fancybox
+    // Fancybox automatically keeps gallery1 and gallery2 SEPARATE
+    Fancybox.bind("[data-fancybox]", {});
+
+    // Carousel 1
+    const container1 = document.getElementById("myCarousel");
+    const options1 = { infinite: false };
+    Carousel(container1, options1, { Arrows }).init();
+
+    // Carousel 2
+    const container2 = document.getElementById("secondCarousel");
+    const options2 = { infinite: false };
+    Carousel(container2, options2, { Arrows }).init();
+  </script>
+</body>
+</html>
