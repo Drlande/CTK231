@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAX LANDESS — Selected Works</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icon font for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Fancybox (lightbox for portfolio images) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
+
+  <!-- Page styles -->
+  <link href="mockup.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <a class="skip" href="#works">Skip to content</a>
+
+  <div id="wrapper">
+    <!-- Decorative red banner (left anchor) -->
+    <aside class="banner" aria-hidden="true">
+      <div class="banner__inner" role="img" aria-label="Decorative red banner">
+        <div class="ribbon"></div>
+        <div class="hash">Need image at some point</div>
+      </div>
+    </aside>
+
+    <!-- Welcoming hub -->
+    <header class="hub" role="banner" aria-label="Introduction">
+      <div class="hub__brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div>
+          <h1 class="hub__name">DAX LANDESS</h1>
+          <p class="hub__tag">Design · Illustration · 3D</p>
+        </div>
+      </div>
+
+      <p class="hub__lede">
+        I craft visual stories with rhythm, texture, and restraint. Below are selected works — click any tile to explore details.
+      </p>
+
+      <div class="hub__actions">
+        <a href="#works" class="btn btn--primary">See Work</a>
+        <a href="#" class="btn btn--ghost">Download CV</a>
+
+        <!-- Social icons (uses Font Awesome) -->
+        <nav class="social" aria-label="Social links">
+          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="ArtStation" aria-label="ArtStation"><i class="fa-solid fa-palette"></i></a>
+          <a href="#" title="Behance" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+        </nav>
+      </div>
+
+      <!-- Inline audio control (replace ambient.mp3 with your file) -->
+      <div class="media-controls" aria-hidden="false">
+        <label for="ambient" class="media-label">Ambient</label>
+        <audio id="ambient" controls preload="none">
+          <source src="ambient.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </header>
+
+    <!-- Gallery -->
+    <main class="grid-gallery" id="works" aria-label="Selected Works">
+      <h2 class="visually-hidden">Selected Works</h2>
+
+      <!-- Each image is now a Fancybox lightbox item -->
+      <article class="item" tabindex="0" aria-labelledby="work1-title">
+        <a
+          href="project 1.jpg"
+          class="media-link"
+          data-fancybox="portfolio"
+          data-caption="Interface Studies — UI shapes &amp; typographic hardware"
+        >
+          <img src="project 1.jpg" alt="Neon tactical character in moody workshop" />
+        </a>
+        <div class="item__meta">
+          <h3 id="work1-title">Interface Studies</h3>
+          <p>UI shapes &amp; typographic hardware</p>
+        </div>
+      </article>
+
+      <article class="item" tabindex="0" aria-labelledby="work2-title">
+        <a
+          href="project 2.jpg"
+          class="media-link"
+          data-fancybox="portfolio"
+          data-caption="Paper Palace — scale model, light direction, texture study"
+        >
+          <img src="project 2.jpg" alt="Paper palace architectural render" />
+        </a>
+        <div class="item__meta">
+          <h3 id="work2-title">Paper Palace</h3>
+          <p>Scale model, light direction, texture</p>
+        </div>
+      </article>
+
+      <article class="item" tabindex="0" aria-labelledby="work3-title">
+        <a
+          href="painting 2.png"
+          class="media-link"
+          data-fancybox="portfolio"
+          data-caption="Observation Deck — digital painting atmosphere study"
+        >
+          <img src="painting 2.png" alt="Space window painting with blue planet horizon" />
+        </a>
+        <div class="item__meta">
+          <h3 id="work3-title">Observation Deck</h3>
+          <p>Digital painting · atmosphere study</p>
+        </div>
+      </article>
+
+      <article class="item" tabindex="0" aria-labelledby="work4-title">
+        <a
+          href="project 3.jpg"
+          class="media-link"
+          data-fancybox="portfolio"
+          data-caption="Squad Readiness — story beats and color keys"
+        >
+          <img src="project 3.jpg" alt="Operator squad pose on an icy map" />
+        </a>
+        <div class="item__meta">
+          <h3 id="work4-title">Squad Readiness</h3>
+          <p>Story beats + color keys</p>
+        </div>
+      </article>
+
+      <article class="item" tabindex="0" aria-labelledby="work5-title">
+        <a
+          href="Illustration.jpg"
+          class="media-link"
+          data-fancybox="portfolio"
+          data-caption="Studio Portrait — shape language and edge control"
+        >
+          <img src="Illustration.jpg" alt="Stylized portrait with soft studio lighting" />
+        </a>
+        <div class="item__meta">
+          <h3 id="work5-title">Studio Portrait</h3>
+          <p>Shape language &amp; edge control</p>
+        </div>
+      </article>
+
+      <!-- Video demo tile (kept as a normal video, not in Fancybox) -->
+      <article class="item video-item" tabindex="0" aria-labelledby="work6-title">
+        <video controls preload="none" poster="project 2.jpg" aria-describedby="work6-desc">
+          <source src="reel.mp4" type="video/mp4">
+          Your browser does not support the video element.
+        </video>
+        <div class="item__meta">
+          <h3 id="work6-title">Demo Reel</h3>
+          <p id="work6-desc">Short reel showing motion work and edits.</p>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- Floating social column (right side) -->
+    <aside class="social-side" aria-hidden="true">
+      <a href="#" title="Instagram" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" title="X / Twitter" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" title="ArtStation" aria-hidden="true"><i class="fa-solid fa-palette"></i></a>
+    </aside>
+  </div>
+
+  <!-- small accessibility script to allow Enter to activate article tiles -->
+  <script>
+    document.querySelectorAll('.item[tabindex]').forEach(it => {
+      it.addEventListener('keydown', e => {
+        if (e.key === 'Enter') {
+          const media = it.querySelector('video, a, audio');
+          if (media) media.focus();
+        }
+      });
+    });
+  </script>
+
+  <!-- Fancybox JS (lightbox for artwork) -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    // Bind Fancybox to portfolio items
+    Fancybox.bind('[data-fancybox="portfolio"]', {
+      Thumbs: {
+        autoStart: true,
+      },
+      Toolbar: {
+        display: {
+          left: ['infobar'],
+          middle: ['zoomIn', 'zoomOut', 'toggle1to1', 'rotateCCW', 'rotateCW'],
+          right: ['slideshow', 'thumbs', 'close'],
+        },
+      },
+    });
+  </script>
+</body>
+</html>
