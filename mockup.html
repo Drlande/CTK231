@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DAX LANDESS — Selected Works</title>
+  <title>DAX LANDESS — Portfolio</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
@@ -21,162 +21,165 @@
   <link href="mockup.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <a class="skip" href="#works">Skip to content</a>
+  <a class="skip" href="#gallery">Skip to content</a>
 
   <div id="wrapper">
-    <!-- Decorative red banner (left anchor) -->
-    <aside class="banner" aria-hidden="true">
-      <div class="banner__inner" role="img" aria-label="Decorative red banner">
-        <div class="ribbon"></div>
-        <div class="hash">Need image at some point</div>
-      </div>
-    </aside>
 
-    <!-- Welcoming hub -->
-    <header class="hub" role="banner" aria-label="Introduction">
-      <div class="hub__brand">
-        <div class="dot" aria-hidden="true"></div>
-        <div>
-          <h1 class="hub__name">DAX LANDESS</h1>
-          <p class="hub__tag">Design · Illustration · 3D</p>
+    <!-- Top banner / hero -->
+    <section class="hero" aria-label="Featured rooftop illustration">
+      <div class="hero__image-wrap">
+        <img
+          src="banner art.png"
+          alt="Girl in black dress sitting on a rooftop at dusk, surrounded by crows above a dimly lit city."
+          class="hero__image"
+        />
+        <div class="hero__overlay"></div>
+        <div class="hero__tagline">
         </div>
       </div>
+    </section>
 
-      <p class="hub__lede">
-        I craft visual stories with rhythm, texture, and restraint. Below are selected works — click any tile to explore details.
-      </p>
+    <!-- Main layout: left gallery, right profile -->
+    <main class="layout" aria-label="Portfolio layout">
 
-      <div class="hub__actions">
-        <a href="#works" class="btn btn--primary">See Work</a>
-        <a href="#" class="btn btn--ghost">Download CV</a>
+      <!-- Gallery column -->
+      <section class="gallery" id="gallery" aria-label="Artworks">
+        <header class="gallery__header">
+          <div class="gallery__title-row">
+            <h1 class="gallery__title">Portfolio</h1>
+            <span class="gallery__count">5 artworks</span>
+          </div>
+          <nav class="gallery__tabs" aria-label="Portfolio filters">
+            <button class="tab tab--active" type="button">All</button>
+            <button class="tab" type="button" disabled>Studies</button>
+            <button class="tab" type="button" disabled>Client</button>
+          </nav>
+        </header>
 
-        <!-- Social icons (uses Font Awesome) -->
-        <nav class="social" aria-label="Social links">
-          <a href="#" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" title="ArtStation" aria-label="ArtStation"><i class="fa-solid fa-palette"></i></a>
-          <a href="#" title="Behance" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-        </nav>
-      </div>
+        <!-- Thumbnail grid -->
+        <div class="gallery__grid">
+          <!-- Each image is a Fancybox lightbox item -->
+          <article class="card" tabindex="0" aria-labelledby="work1-title">
+            <a
+              href="project 1.jpg"
+              class="card__media-link"
+              data-fancybox="portfolio"
+              data-caption="Interface Studies — UI shapes &amp; typographic hardware"
+            >
+              <img src="project 1.jpg" alt="Neon tactical character in moody workshop" />
+            </a>
+            <div class="card__meta">
+              <h2 id="work1-title">Interface Studies</h2>
+              <p>UI shapes &amp; typographic hardware</p>
+            </div>
+          </article>
 
-      <!-- Inline audio control (replace ambient.mp3 with your file) -->
-      <div class="media-controls" aria-hidden="false">
-        <label for="ambient" class="media-label">Ambient</label>
-        <audio id="ambient" controls preload="none">
-          <source src="ambient.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </header>
+          <article class="card" tabindex="0" aria-labelledby="work2-title">
+            <a
+              href="project 2.jpg"
+              class="card__media-link"
+              data-fancybox="portfolio"
+              data-caption="Paper Palace — scale model, light direction, texture study"
+            >
+              <img src="project 2.jpg" alt="Paper palace architectural render" />
+            </a>
+            <div class="card__meta">
+              <h2 id="work2-title">Paper Palace</h2>
+              <p>Scale model, light direction, texture</p>
+            </div>
+          </article>
 
-    <!-- Gallery -->
-    <main class="grid-gallery" id="works" aria-label="Selected Works">
-      <h2 class="visually-hidden">Selected Works</h2>
+          <article class="card" tabindex="0" aria-labelledby="work3-title">
+            <a
+              href="painting 2.png"
+              class="card__media-link"
+              data-fancybox="portfolio"
+              data-caption="Observation Deck — digital painting atmosphere study"
+            >
+              <img src="painting 2.png" alt="Space window painting with blue planet horizon" />
+            </a>
+            <div class="card__meta">
+              <h2 id="work3-title">Observation Deck</h2>
+              <p>Digital painting · atmosphere study</p>
+            </div>
+          </article>
 
-      <!-- Each image is now a Fancybox lightbox item -->
-      <article class="item" tabindex="0" aria-labelledby="work1-title">
-        <a
-          href="project 1.jpg"
-          class="media-link"
-          data-fancybox="portfolio"
-          data-caption="Interface Studies — UI shapes &amp; typographic hardware"
-        >
-          <img src="project 1.jpg" alt="Neon tactical character in moody workshop" />
-        </a>
-        <div class="item__meta">
-          <h3 id="work1-title">Interface Studies</h3>
-          <p>UI shapes &amp; typographic hardware</p>
+          <article class="card" tabindex="0" aria-labelledby="work4-title">
+            <a
+              href="project 3.jpg"
+              class="card__media-link"
+              data-fancybox="portfolio"
+              data-caption="Squad Readiness — story beats and color keys"
+            >
+              <img src="project 3.jpg" alt="Operator squad pose on an icy map" />
+            </a>
+            <div class="card__meta">
+              <h2 id="work4-title">Squad Readiness</h2>
+              <p>Story beats + color keys</p>
+            </div>
+          </article>
+
+          <article class="card card--video" tabindex="0" aria-labelledby="work5-title">
+            <video controls preload="none" poster="project 2.jpg" aria-describedby="work5-desc">
+              <source src="reel.mp4" type="video/mp4">
+              Your browser does not support the video element.
+            </video>
+            <div class="card__meta">
+              <h2 id="work5-title">Demo Reel</h2>
+              <p id="work5-desc">Short reel showing motion work and edits.</p>
+            </div>
+          </article>
         </div>
-      </article>
+      </section>
 
-      <article class="item" tabindex="0" aria-labelledby="work2-title">
-        <a
-          href="project 2.jpg"
-          class="media-link"
-          data-fancybox="portfolio"
-          data-caption="Paper Palace — scale model, light direction, texture study"
-        >
-          <img src="project 2.jpg" alt="Paper palace architectural render" />
-        </a>
-        <div class="item__meta">
-          <h3 id="work2-title">Paper Palace</h3>
-          <p>Scale model, light direction, texture</p>
-        </div>
-      </article>
+      <!-- Profile sidebar -->
+      <aside class="profile" aria-label="About Dax Landess">
+        <div class="profile__card">
+          <div class="profile__avatar-wrap">
+            <div class="profile__avatar-ring"></div>
+            <!-- you can swap this image for a real portrait later -->
+            <img src="Illustration.jpg" alt="Portrait illustration by Dax Landess" class="profile__avatar">
+          </div>
 
-      <article class="item" tabindex="0" aria-labelledby="work3-title">
-        <a
-          href="painting 2.png"
-          class="media-link"
-          data-fancybox="portfolio"
-          data-caption="Observation Deck — digital painting atmosphere study"
-        >
-          <img src="painting 2.png" alt="Space window painting with blue planet horizon" />
-        </a>
-        <div class="item__meta">
-          <h3 id="work3-title">Observation Deck</h3>
-          <p>Digital painting · atmosphere study</p>
-        </div>
-      </article>
+          <h2 class="profile__name">Dax Landess</h2>
+          <p class="profile__role">Student Illustrator &amp; Designer</p>
 
-      <article class="item" tabindex="0" aria-labelledby="work4-title">
-        <a
-          href="project 3.jpg"
-          class="media-link"
-          data-fancybox="portfolio"
-          data-caption="Squad Readiness — story beats and color keys"
-        >
-          <img src="project 3.jpg" alt="Operator squad pose on an icy map" />
-        </a>
-        <div class="item__meta">
-          <h3 id="work4-title">Squad Readiness</h3>
-          <p>Story beats + color keys</p>
-        </div>
-      </article>
+          <div class="profile__meta">
+            <p>Based in Illinois · exploring mood-driven character art, interfaces, and 3D forms.</p>
+          </div>
 
-      <article class="item" tabindex="0" aria-labelledby="work5-title">
-        <a
-          href="Illustration.jpg"
-          class="media-link"
-          data-fancybox="portfolio"
-          data-caption="Studio Portrait — shape language and edge control"
-        >
-          <img src="Illustration.jpg" alt="Stylized portrait with soft studio lighting" />
-        </a>
-        <div class="item__meta">
-          <h3 id="work5-title">Studio Portrait</h3>
-          <p>Shape language &amp; edge control</p>
-        </div>
-      </article>
+          <div class="profile__buttons">
+            <a href="#gallery" class="btn btn--primary btn--full">View Portfolio</a>
+            <a href="#" class="btn btn--ghost btn--full">Download CV</a>
+          </div>
 
-      <!-- Video demo tile (kept as a normal video, not in Fancybox) -->
-      <article class="item video-item" tabindex="0" aria-labelledby="work6-title">
-        <video controls preload="none" poster="project 2.jpg" aria-describedby="work6-desc">
-          <source src="reel.mp4" type="video/mp4">
-          Your browser does not support the video element.
-        </video>
-        <div class="item__meta">
-          <h3 id="work6-title">Demo Reel</h3>
-          <p id="work6-desc">Short reel showing motion work and edits.</p>
+          <div class="profile__section">
+            <h3 class="profile__section-title">Social</h3>
+            <div class="profile__social">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="ArtStation"><i class="fa-solid fa-palette"></i></a>
+              <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            </div>
+          </div>
+
+          </div>
         </div>
-      </article>
+      </aside>
 
     </main>
-
-    <!-- Floating social column (right side) -->
-    <aside class="social-side" aria-hidden="true">
-      <a href="#" title="Instagram" aria-hidden="true"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" title="X / Twitter" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" title="ArtStation" aria-hidden="true"><i class="fa-solid fa-palette"></i></a>
-    </aside>
   </div>
 
-  <!-- small accessibility script to allow Enter to activate article tiles -->
+  <!-- keyboard helper for cards -->
   <script>
-    document.querySelectorAll('.item[tabindex]').forEach(it => {
-      it.addEventListener('keydown', e => {
+    document.querySelectorAll('.card[tabindex]').forEach(card => {
+      card.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
-          const media = it.querySelector('video, a, audio');
-          if (media) media.focus();
+          const media = card.querySelector('a.card__media-link, video');
+          if (media && media.tagName === 'A') {
+            media.click();
+          } else if (media) {
+            media.focus();
+          }
         }
       });
     });
@@ -185,16 +188,13 @@
   <!-- Fancybox JS (lightbox for artwork) -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script>
-    // Bind Fancybox to portfolio items
     Fancybox.bind('[data-fancybox="portfolio"]', {
-      Thumbs: {
-        autoStart: true,
-      },
+      Thumbs: { autoStart: true },
       Toolbar: {
         display: {
           left: ['infobar'],
-          middle: ['zoomIn', 'zoomOut', 'toggle1to1', 'rotateCCW', 'rotateCW'],
-          right: ['slideshow', 'thumbs', 'close'],
+          middle: ['zoomIn','zoomOut','toggle1to1','rotateCCW','rotateCW'],
+          right: ['slideshow','thumbs','close'],
         },
       },
     });
