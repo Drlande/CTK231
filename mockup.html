@@ -8,10 +8,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (icon font for social icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Fancybox (lightbox for portfolio images) -->
+  <!-- Fancybox (lightbox) -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
@@ -21,11 +18,12 @@
   <link href="mockup.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <a class="skip" href="#gallery">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
 
   <div id="wrapper">
 
-    <!-- Top banner / hero -->
+  
+    <!-- Hero -->
     <section class="hero" aria-label="Featured rooftop illustration">
       <div class="hero__image-wrap">
         <img
@@ -35,169 +33,226 @@
         />
         <div class="hero__overlay"></div>
         <div class="hero__tagline">
+          <p class="hero__kicker">Portfolio</p>
+          <h1 class="hero__title">Dax Landess</h1>
+          <p class="hero__subtitle">
+            Digital painting and sketch studies
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Main layout: left gallery, right profile -->
-    <main class="layout" aria-label="Portfolio layout">
+    <!-- MAIN -->
+    <main id="main" class="main">
 
-      <!-- Gallery column -->
-      <section class="gallery" id="gallery" aria-label="Artworks">
-        <header class="gallery__header">
-          <div class="gallery__title-row">
-            <h1 class="gallery__title">Portfolio</h1>
-            <span class="gallery__count">5 artworks</span>
-          </div>
-          <nav class="gallery__tabs" aria-label="Portfolio filters">
-            <button class="tab tab--active" type="button">All</button>
-            <button class="tab" type="button" disabled>Studies</button>
-            <button class="tab" type="button" disabled>Client</button>
-          </nav>
-        </header>
-
-        <!-- Thumbnail grid -->
-        <div class="gallery__grid">
-          <!-- Each image is a Fancybox lightbox item -->
-          <article class="card" tabindex="0" aria-labelledby="work1-title">
-            <a
-              href="project 1.jpg"
-              class="card__media-link"
-              data-fancybox="portfolio"
-              data-caption="Interface Studies — UI shapes &amp; typographic hardware"
-            >
-              <img src="project 1.jpg" alt="Neon tactical character in moody workshop" />
-            </a>
-            <div class="card__meta">
-              <h2 id="work1-title">Interface Studies</h2>
-              <p>UI shapes &amp; typographic hardware</p>
-            </div>
-          </article>
-
-          <article class="card" tabindex="0" aria-labelledby="work2-title">
-            <a
-              href="project 2.jpg"
-              class="card__media-link"
-              data-fancybox="portfolio"
-              data-caption="Paper Palace — scale model, light direction, texture study"
-            >
-              <img src="project 2.jpg" alt="Paper palace architectural render" />
-            </a>
-            <div class="card__meta">
-              <h2 id="work2-title">Paper Palace</h2>
-              <p>Scale model, light direction, texture</p>
-            </div>
-          </article>
-
-          <article class="card" tabindex="0" aria-labelledby="work3-title">
-            <a
-              href="painting 2.png"
-              class="card__media-link"
-              data-fancybox="portfolio"
-              data-caption="Observation Deck — digital painting atmosphere study"
-            >
-              <img src="painting 2.png" alt="Space window painting with blue planet horizon" />
-            </a>
-            <div class="card__meta">
-              <h2 id="work3-title">Observation Deck</h2>
-              <p>Digital painting · atmosphere study</p>
-            </div>
-          </article>
-
-          <article class="card" tabindex="0" aria-labelledby="work4-title">
-            <a
-              href="project 3.jpg"
-              class="card__media-link"
-              data-fancybox="portfolio"
-              data-caption="Squad Readiness — story beats and color keys"
-            >
-              <img src="project 3.jpg" alt="Operator squad pose on an icy map" />
-            </a>
-            <div class="card__meta">
-              <h2 id="work4-title">Squad Readiness</h2>
-              <p>Story beats + color keys</p>
-            </div>
-          </article>
-
-          <article class="card card--video" tabindex="0" aria-labelledby="work5-title">
-            <video controls preload="none" poster="project 2.jpg" aria-describedby="work5-desc">
-              <source src="reel.mp4" type="video/mp4">
-              Your browser does not support the video element.
-            </video>
-            <div class="card__meta">
-              <h2 id="work5-title">Demo Reel</h2>
-              <p id="work5-desc">Short reel showing motion work and edits.</p>
-            </div>
-          </article>
-        </div>
+      <!-- About block -->
+      <section class="about">
+        <h2 class="about__title">About</h2>
+        <p class="about__text">
+          Student illustrator &amp; designer
+        </p>
       </section>
 
-      <!-- Profile sidebar -->
-      <aside class="profile" aria-label="About Dax Landess">
-        <div class="profile__card">
-          <div class="profile__avatar-wrap">
-            <div class="profile__avatar-ring"></div>
-            <!-- you can swap this image for a real portrait later -->
-            <img src="Illustration.jpg" alt="Portrait illustration by Dax Landess" class="profile__avatar">
+      <!-- Tabs -->
+      <section class="work">
+        <div class="work__header">
+          <h2 class="work__title">Work</h2>
+          <div class="work-tabs" aria-label="Artwork categories">
+            <button class="tab-button tab-button--active" type="button" data-tab-target="digital">
+              Digital Painting
+            </button>
+            <button class="tab-button" type="button" data-tab-target="sketches">
+              Sketches
+            </button>
           </div>
+        </div>
 
-          <h2 class="profile__name">Dax Landess</h2>
-          <p class="profile__role">Student Illustrator &amp; Designer</p>
+        <!-- Panels -->
+        <div class="tab-panels">
 
-          <div class="profile__meta">
-            <p>Based in Illinois · exploring mood-driven character art, interfaces, and 3D forms.</p>
-          </div>
+          <!-- DIGITAL -->
+          <div id="tab-digital" class="tab-panel is-active" aria-label="Digital paintings">
+            <div class="grid grid--digital">
+              <!-- Astronaut (change filename if needed) -->
+              <a href="Illustration.jpg" class="grid__item" data-fancybox="digital">
+                <img src="Illustration.jpg" alt="Digital painting">
+              </a>
 
-          <div class="profile__buttons">
-            <a href="#gallery" class="btn btn--primary btn--full">View Portfolio</a>
-            <a href="#" class="btn btn--ghost btn--full">Download CV</a>
-          </div>
+              <a href="painting 2.png" class="grid__item" data-fancybox="digital">
+                <img src="painting 2.png" alt="Digital painting">
+              </a>
 
-          <div class="profile__section">
-            <h3 class="profile__section-title">Social</h3>
-            <div class="profile__social">
-              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="ArtStation"><i class="fa-solid fa-palette"></i></a>
-              <a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+              <a href="project 3.jpg" class="grid__item" data-fancybox="digital">
+                <img src="project 3.jpg" alt="Digital painting">
+              </a>
+
+              <!-- Reel as simple video card -->
+              <div class="grid__item grid__item--video">
+                <video controls preload="none" poster="project 3.jpg">
+                  <source src="reel.mp4" type="video/mp4">
+                  Your browser does not support the video element.
+                </video>
+              </div>
             </div>
           </div>
 
+          <!-- SKETCHES -->
+          <div id="tab-sketches" class="tab-panel" aria-label="Sketchbook studies">
+            <div class="grid grid--sketches">
+              <!-- 35 sketch images, no labels -->
+              <a href="Sketches/Screenshot 2025-12-05 175647.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175647.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175728.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175728.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175750.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175750.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175806.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175806.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175816.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175816.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175832.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175832.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175842.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175842.png" alt="Sketch page">
+              </a>
+
+              <a href="Sketches/Screenshot 2025-12-05 175854.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175854.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175909.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175909.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175930.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175930.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175950.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175950.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 175959.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 175959.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180009.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180009.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180025.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180025.png" alt="Sketch page">
+              </a>
+
+              <a href="Sketches/Screenshot 2025-12-05 180036.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180036.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180045.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180045.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180055.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180055.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180103.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180103.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180112.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180112.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180123.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180123.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180131.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180131.png" alt="Sketch page">
+              </a>
+
+              <a href="Sketches/Screenshot 2025-12-05 180139.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180139.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180147.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180147.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180157.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180157.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180313.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180313.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180323.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180323.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180339.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180339.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180349.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180349.png" alt="Sketch page">
+              </a>
+
+              <a href="Sketches/Screenshot 2025-12-05 180359.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180359.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180416.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180416.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180425.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180425.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180435.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180435.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180446.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180446.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180455.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180455.png" alt="Sketch page">
+              </a>
+              <a href="Sketches/Screenshot 2025-12-05 180536.png" data-fancybox="sketches" class="grid__item">
+                <img src="Sketches/Screenshot 2025-12-05 180536.png" alt="Sketch page">
+              </a>
+
+            </div>
           </div>
+
         </div>
-      </aside>
-
+      </section>
     </main>
-  </div>
 
-  <!-- keyboard helper for cards -->
+  </div><!-- /#wrapper -->
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
   <script>
-    document.querySelectorAll('.card[tabindex]').forEach(card => {
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter') {
-          const media = card.querySelector('a.card__media-link, video');
-          if (media && media.tagName === 'A') {
-            media.click();
-          } else if (media) {
-            media.focus();
-          }
-        }
+    // Tab switching
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels  = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab-target');
+
+        tabButtons.forEach((b) => b.classList.remove('tab-button--active'));
+        btn.classList.add('tab-button--active');
+
+        tabPanels.forEach((panel) => {
+          panel.classList.toggle('is-active', panel.id === 'tab-' + target);
+        });
       });
     });
-  </script>
 
-  <!-- Fancybox JS (lightbox for artwork) -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script>
-    Fancybox.bind('[data-fancybox="portfolio"]', {
+    // Fancybox – disable hash so it doesn't auto-open on page load
+    Fancybox.bind('[data-fancybox]', {
+      Hash: false,
       Thumbs: { autoStart: true },
       Toolbar: {
         display: {
           left: ['infobar'],
-          middle: ['zoomIn','zoomOut','toggle1to1','rotateCCW','rotateCW'],
-          right: ['slideshow','thumbs','close'],
+          middle: ['zoomIn', 'zoomOut', 'toggle1to1', 'rotateCCW', 'rotateCW'],
+          right: ['slideshow', 'thumbs', 'close'],
         },
       },
     });
   </script>
+
 </body>
 </html>
